@@ -49,6 +49,8 @@ function devhelp {
     echo -e ""
     echo -e "${GREEN}dkpgnginx${RESTORE}         Starts dockerized ${RED}nginx and postgres${RESTORE}"
     echo -e ""
+    echo -e "${GREEN}onlynginx${RESTORE}         Starts dockerized ${RED}nginx only"
+    echo -e ""
 }
 
 function pytests {
@@ -101,6 +103,15 @@ function dkpgnginx {
     CD=$(pwd)
     cd $PROJ_BASE
     docker-compose -f docker/compose/pgnginx.yaml up
+    exitcode=$?
+    cd $CD
+    return $exitcode
+}
+
+function onlynginx {
+    CD=$(pwd)
+    cd $PROJ_BASE
+    docker-compose -f docker/compose/onlynginx.yaml up
     exitcode=$?
     cd $CD
     return $exitcode

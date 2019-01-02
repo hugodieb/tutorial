@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'queroestudar.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DJANGO_DB_NAME', 'app'),
-        'USER': os.getenv('DJANGO_DB_USER', 'app'),
-        'PASSWORD': os.getenv('DJANGO_DB_PASSWORD', 'app'),
+        'NAME': os.getenv('DJANGO_DB_NAME', 'queroestudar'),
+        'USER': os.getenv('DJANGO_DB_USER', 'queroadmin'),
+        'PASSWORD': os.getenv('DJANGO_DB_PASSWORD', 'adminquero'),
         'HOST': os.getenv('DJANGO_DB_HOST', 'localhost'),
         'PORT': os.getenv('DJANGO_DB_PORT', '5432'),
     }
