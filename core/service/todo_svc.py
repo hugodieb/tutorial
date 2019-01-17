@@ -25,6 +25,7 @@ def list_todos():
     f = e.hometown
 
     # many to many
+    # testea de melhor uso de orm do django
 
     tutorial = Tutorial.objects.prefetch_related('videos').get(id=4)
     video = [v.title for v in tutorial.videos.all()]
