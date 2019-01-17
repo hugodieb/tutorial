@@ -31,7 +31,7 @@ RUN mkdir /dkdata
 # Cria e já entra dentro desta pasta app
 WORKDIR /app
 
-# Estou copiando o arquivo requirmens para dentro de /app
+# Estou copiando o arquivo requirements para dentro de /app
 COPY requirements.txt ./
 
 # Vou instalar os pacotes dentro do requirements

@@ -79,8 +79,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('DJANGO_DB_NAME', 'queroestudar'),
-        'USER': os.getenv('DJANGO_DB_USER', 'queroadmin'),
-        'PASSWORD': os.getenv('DJANGO_DB_PASSWORD', 'adminquero'),
+        'USER': os.getenv('DJANGO_DB_USER', 'adminquero'),
+        'PASSWORD': os.getenv('DJANGO_DB_PASSWORD', 'admin'),
         'HOST': os.getenv('DJANGO_DB_HOST', 'localhost'),
         'PORT': os.getenv('DJANGO_DB_PORT', '5432'),
     }
